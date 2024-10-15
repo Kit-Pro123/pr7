@@ -10,7 +10,14 @@ def dvenadcat(n):
     if g==11:
         g='B'    
     if n < 12:
-        return str(n)    
+        if n==10:
+            n='A'
+            return str(n)
+        elif n==11:
+            n='B'
+            return str(n)
+        else:
+            return str(n)          
     else:
         return dvenadcat(f) + str(g)
 print('Введите целое число для перевода в двенадцатиричную систему счисления')
